@@ -1,5 +1,5 @@
 
-// Change for initial commit
+// Change for initial commit 2
 
 const siteContent = {
   "nav": {
@@ -42,4 +42,22 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+// logo.setAttribute('src', "http://www.clker.com/cliparts/c/4/d/4/1339095030653173705bananapic2.svg.hi.png")
+
+let nav = document.querySelectorAll('header nav a');
+nav[0].textContent = siteContent["nav"]["nav-item-1"];
+nav[1].textContent = siteContent["nav"]["nav-item-2"];
+nav[2].textContent = siteContent["nav"]["nav-item-3"];
+nav[3].textContent = siteContent["nav"]["nav-item-4"];
+nav[4].textContent = siteContent["nav"]["nav-item-5"];
+nav[5].textContent = siteContent["nav"]["nav-item-6"];
+
+let ctaText = document.querySelector('.cta-text h1');
+ctaText.textContent = siteContent["cta"]["h1"];
+
+let ctaButton = document.querySelector('.cta-text button')
+ctaButton.textContent = siteContent["cta"]["button"];
+
+let ctaImage = document.getElementById('cta-img');
+ctaImage.setAttribute('src', siteContent["cta"]["img-src"]);
