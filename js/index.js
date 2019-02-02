@@ -46,6 +46,18 @@ logo.setAttribute('src', siteContent["nav"]["img-src"]);
 // logo.setAttribute('src', "http://www.clker.com/cliparts/c/4/d/4/1339095030653173705bananapic2.svg.hi.png")
 
 let nav = document.querySelectorAll('header nav a');
+
+Array.from(nav).forEach(elem => {
+  nav[elem].style.color = "green";
+});
+
+// nav[0].style.color = "green";
+// nav[1].style.color = "green";
+// nav[2].style.color = "green";
+// nav[3].style.color = "green";
+// nav[4].style.color = "green";
+// nav[5].style.color = "green";
+
 nav[0].textContent = siteContent["nav"]["nav-item-1"];
 nav[1].textContent = siteContent["nav"]["nav-item-2"];
 nav[2].textContent = siteContent["nav"]["nav-item-3"];
