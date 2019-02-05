@@ -47,16 +47,17 @@ logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
 let nav = document.querySelectorAll('header nav a');
 
-Array.from(nav).forEach(elem => {
-  nav[elem].style.color = "green";
-});
+// why doesn't this work 😵
+// nav.forEach(elem => {
+//   nav[elem].style.color = "green";
+// });
 
-// nav[0].style.color = "green";
-// nav[1].style.color = "green";
-// nav[2].style.color = "green";
-// nav[3].style.color = "green";
-// nav[4].style.color = "green";
-// nav[5].style.color = "green";
+nav[0].style.color = "green";
+nav[1].style.color = "green";
+nav[2].style.color = "green";
+nav[3].style.color = "green";
+nav[4].style.color = "green";
+nav[5].style.color = "green";
 
 nav[0].textContent = siteContent["nav"]["nav-item-1"];
 nav[1].textContent = siteContent["nav"]["nav-item-2"];
@@ -64,6 +65,20 @@ nav[2].textContent = siteContent["nav"]["nav-item-3"];
 nav[3].textContent = siteContent["nav"]["nav-item-4"];
 nav[4].textContent = siteContent["nav"]["nav-item-5"];
 nav[5].textContent = siteContent["nav"]["nav-item-6"];
+
+let navBox = document.querySelector('.container header nav')
+
+newNav1 = document.createElement('a')
+newNav1.setAttribute('href', '#');
+newNav1.textContent = "Ballers";
+navBox.appendChild(newNav1);
+
+newNav2 = document.createElement('a')
+newNav2.setAttribute('href', '#');
+newNav2.textContent = "Kicks";
+navBox.prepend(newNav2);
+
+
 
 let ctaText = document.querySelector('.cta-text h1');
 ctaText.textContent = siteContent["cta"]["h1"];
