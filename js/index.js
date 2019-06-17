@@ -1,3 +1,6 @@
+
+// Change for initial commit 2
+
 const siteContent = {
   "nav": {
     "nav-item-1": "Services",
@@ -39,4 +42,94 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+// logo.setAttribute('src', "http://www.clker.com/cliparts/c/4/d/4/1339095030653173705bananapic2.svg.hi.png")
+
+let nav = document.querySelectorAll('header nav a');
+
+// why doesn't this work 😵
+// nav.forEach(elem => {
+//   nav[elem].style.color = "green";
+// });
+
+nav[0].style.color = "green";
+nav[1].style.color = "green";
+nav[2].style.color = "green";
+nav[3].style.color = "green";
+nav[4].style.color = "green";
+nav[5].style.color = "green";
+
+nav[0].textContent = siteContent["nav"]["nav-item-1"];
+nav[1].textContent = siteContent["nav"]["nav-item-2"];
+nav[2].textContent = siteContent["nav"]["nav-item-3"];
+nav[3].textContent = siteContent["nav"]["nav-item-4"];
+nav[4].textContent = siteContent["nav"]["nav-item-5"];
+nav[5].textContent = siteContent["nav"]["nav-item-6"];
+
+let navBox = document.querySelector('.container header nav')
+
+newNav1 = document.createElement('a')
+newNav1.setAttribute('href', '#');
+newNav1.textContent = "Ballers";
+navBox.appendChild(newNav1);
+
+newNav2 = document.createElement('a')
+newNav2.setAttribute('href', '#');
+newNav2.textContent = "Kicks";
+navBox.prepend(newNav2);
+
+
+
+let ctaText = document.querySelector('.cta-text h1');
+ctaText.textContent = siteContent["cta"]["h1"];
+
+let ctaButton = document.querySelector('.cta-text button')
+ctaButton.textContent = siteContent["cta"]["button"];
+
+let ctaImage = document.getElementById('cta-img');
+ctaImage.setAttribute('src', siteContent["cta"]["img-src"]);
+
+let featuresHeading = document.querySelector('.top-content .text-content h4');
+featuresHeading.textContent = siteContent["main-content"]["features-h4"];
+
+let featuresContent = document.querySelector('.top-content .text-content p');
+featuresContent.textContent = siteContent["main-content"]["features-content"];
+
+let aboutHeading = document.querySelectorAll('.top-content .text-content h4')[1];
+aboutHeading.textContent = siteContent["main-content"]["about-h4"];
+
+let aboutContent = document.querySelectorAll('.top-content .text-content p')[1];
+aboutContent.textContent = siteContent["main-content"]["about-content"];
+
+let middleImage = document.getElementById('middle-img');
+middleImage.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+let servicesHeading = document.querySelectorAll('.bottom-content .text-content h4')[0];
+servicesHeading.textContent = siteContent["main-content"]["services-h4"];
+
+let servicesContent = document.querySelectorAll('.bottom-content .text-content p')[0];
+servicesContent.textContent = siteContent["main-content"]["services-content"];
+
+let productHeading = document.querySelectorAll('.bottom-content .text-content h4')[1];
+productHeading.textContent = siteContent["main-content"]["product-h4"];
+
+let productContent = document.querySelectorAll('.bottom-content .text-content p')[1];
+productContent.textContent = siteContent["main-content"]["product-content"];
+
+let visionHeading = document.querySelectorAll('.bottom-content .text-content h4')[2];
+visionHeading.textContent = siteContent["main-content"]["vision-h4"];
+
+let visionContent = document.querySelectorAll('.bottom-content .text-content p')[2];
+visionContent.textContent = siteContent["main-content"]["vision-content"];
+
+let contactHeader = document.querySelector('.contact h4');
+contactHeader.textContent = siteContent["contact"]["contact-h4"];
+
+let contactAddress = document.querySelectorAll('.contact p')[0];
+contactAddress.textContent = siteContent["contact"]["address"];
+
+let contactPhone = document.querySelectorAll('.contact p')[1];
+contactPhone.textContent = siteContent["contact"]["phone"];
+
+let contactEmail = document.querySelectorAll('.contact p')[2];
+contactEmail.textContent = siteContent["contact"]["email"];
